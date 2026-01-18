@@ -9,6 +9,7 @@ import java.util.UUID;
 
 public interface EventOutboxRepositoryPort {
     List<EventOutbox> findAllUnpublishedEvents(Instant cursor, UUID tieBreaker, int limit, int retryCount);
+    void save(List<EventOutbox> events);
     void saveEvent(Event<?> event) throws Exception;
 }
 

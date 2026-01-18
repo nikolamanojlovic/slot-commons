@@ -1,8 +1,11 @@
 package com.heapik.slot.commonsevent.domain.inbox;
 
 import java.time.Instant;
+import java.util.UUID;
 
 public class EventInbox {
+
+    private UUID id;
 
     private String eventType;
 
@@ -19,7 +22,8 @@ public class EventInbox {
     public EventInbox() {
     }
 
-    public EventInbox(String eventType, String payload, Instant occurredAt) {
+    public EventInbox(UUID id, String eventType, String payload, Instant occurredAt) {
+        this.id = id;
         this.eventType = eventType;
         this.payload = payload;
         this.occurredAt = occurredAt;
@@ -39,6 +43,10 @@ public class EventInbox {
         this.errorMessage = errorMessage;
     }
 
+    public UUID getId() {
+        return id;
+    }
+    
     public String getEventType() {
         return eventType;
     }
