@@ -25,4 +25,4 @@ jobs:
       - name: Publish JAR to GitHub Packages
         run: ./mvnw deploy -DskipTests
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SLOT_COMMONS_DEPLOY_TOKEN }}
