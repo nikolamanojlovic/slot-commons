@@ -1,0 +1,24 @@
+# IntelliJ
+.idea/
+*.iml
+out/
+
+# Maven - ignore all target folders recursively
+**/target/
+
+# Maven generated files
+dependency-reduced-pom.xml
+release.properties
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+*.war
+*.ear
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar

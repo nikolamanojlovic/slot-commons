@@ -1,0 +1,65 @@
+package com.heapik.slot.commonsevent.domain.inbox;
+
+import java.time.Instant;
+
+public class EventInbox {
+
+    private String eventType;
+
+    private String payload;
+
+    private Instant occurredAt;
+
+    private boolean published;
+
+    private int retryCount;
+
+    private String errorMessage;
+
+    public EventInbox() {
+    }
+
+    public EventInbox(String eventType, String payload, Instant occurredAt) {
+        this.eventType = eventType;
+        this.payload = payload;
+        this.occurredAt = occurredAt;
+        this.published = false;
+        this.retryCount = 0;
+    }
+
+    public void incrementRetryCount() {
+        this.retryCount++;
+    }
+
+    public void published() {
+        this.published = true;
+    }
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+    }
+
+    public String getEventType() {
+        return eventType;
+    }
+
+    public String getPayload() {
+        return payload;
+    }
+
+    public Instant getOccurredAt() {
+        return occurredAt;
+    }
+
+    public boolean isPublished() {
+        return published;
+    }
+
+    public int getRetryCount() {
+        return retryCount;
+    }
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+}
