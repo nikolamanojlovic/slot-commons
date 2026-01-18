@@ -7,11 +7,10 @@
     <parent>
         <groupId>com.heapik.slot</groupId>
         <artifactId>commons</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>commons-event</artifactId>
-    <version>1.0.1</version>
     <packaging>jar</packaging>
 </project>
