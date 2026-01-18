@@ -12,5 +12,6 @@
     </parent>
 
     <artifactId>commons-event</artifactId>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 </project>
