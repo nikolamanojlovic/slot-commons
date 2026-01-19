@@ -31,6 +31,16 @@ public class EventInbox {
         this.retryCount = 0;
     }
 
+    public EventInbox(UUID id, String eventType, String payload, Instant occurredAt, boolean published, int retryCount, String errorMessage) {
+        this.id = id;
+        this.eventType = eventType;
+        this.payload = payload;
+        this.occurredAt = occurredAt;
+        this.published = published;
+        this.retryCount = retryCount;
+        this.errorMessage = errorMessage;
+    }
+
     public void incrementRetryCount() {
         this.retryCount++;
     }
@@ -46,7 +56,7 @@ public class EventInbox {
     public UUID getId() {
         return id;
     }
-    
+
     public String getEventType() {
         return eventType;
     }
