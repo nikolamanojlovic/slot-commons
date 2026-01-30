@@ -1,5 +1,7 @@
 package com.heapik.slot.commonsevent.domain.outbox;
 
+import com.fasterxml.jackson.databind.JsonNode;
+
 import java.time.Instant;
 import java.util.UUID;
 
@@ -9,7 +11,7 @@ public class EventOutbox {
 
     private String eventType;
 
-    private String payload;
+    private JsonNode payload;
 
     private Instant occurredAt;
 
@@ -22,7 +24,7 @@ public class EventOutbox {
     public EventOutbox() {
     }
 
-    public EventOutbox(UUID id, String eventType, String payload, Instant occurredAt) {
+    public EventOutbox(UUID id, String eventType, JsonNode payload, Instant occurredAt) {
         this.id = id;
         this.eventType = eventType;
         this.payload = payload;
@@ -31,7 +33,7 @@ public class EventOutbox {
         this.retryCount = 0;
     }
 
-    public EventOutbox(UUID id, String eventType, String payload, Instant occurredAt, boolean published, int retryCount, String errorMessage) {
+    public EventOutbox(UUID id, String eventType, JsonNode payload, Instant occurredAt, boolean published, int retryCount, String errorMessage) {
         this.id = id;
         this.eventType = eventType;
         this.payload = payload;
@@ -61,7 +63,7 @@ public class EventOutbox {
         return eventType;
     }
 
-    public String getPayload() {
+    public JsonNode getPayload() {
         return payload;
     }
 
